@@ -4,9 +4,7 @@ RUN apk add py3-pip
 RUN echo "---> Installing Python 3.x Dependencies..."
 
 RUN python3 -m pip install -U pip
-RUN python3 -m pip install -U elasticsearch
-RUN python3 -m pip install -U elasticsearch-dsl
-RUN python3 -m pip install -U flask
+RUN python3 -m pip install -r /opt/cesapi/requirements.txt
 
 RUN mkdir -p /opt/cesapi
 ADD . /opt/cesapi
